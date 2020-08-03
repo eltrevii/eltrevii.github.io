@@ -60,7 +60,7 @@
       "textButton": "OK"
     },
     "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
-    "google-analytics": "google-site-verification=mdGQwJd6xoE-blMshy6ra3vacHeDzGvWAMzEzh_UUfI",
+    "google-analytics": "",
     "gdpr": false
   },
   "pages": {

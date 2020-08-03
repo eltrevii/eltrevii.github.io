@@ -45,9 +45,22 @@
     "favicon": false,
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
-    "sitemapSwitcherAuto": false,
+    "sitemapSwitcherAuto": "on",
     "siteUrl": false,
-    "cookiesAlert": false,
+    "cookiesAlert": {
+      "customDialogSelector": false,
+      "colorText": "#424a4d",
+      "colorBg": "#eaeff1",
+      "colorButton": "",
+      "colorLink": "#424a4d",
+      "underlineLink": false,
+      "opacity": "99",
+      "opacityOverlay": "80",
+      "text": "Usamos cookies para ofrecer una mejor experiencia / We use cookies to offer a better experience",
+      "textButton": "OK"
+    },
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "google-analytics": "google-site-verification=mdGQwJd6xoE-blMshy6ra3vacHeDzGvWAMzEzh_UUfI",
     "gdpr": false
   },
   "pages": {

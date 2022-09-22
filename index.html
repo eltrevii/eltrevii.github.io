@@ -5,7 +5,6 @@
     /* width */
     ::-webkit-scrollbar {
       width: 15px;
-      padding: 10px;
     }
 
     /* Track */
@@ -19,6 +18,7 @@
     ::-webkit-scrollbar-thumb {
       background: gray; 
       border-radius: 10px;
+      background-clip: padding-box;
     }
 
     /* Handle on hover */
@@ -29,7 +29,22 @@
     body {
       overflow: overlay;
     }
+      
+    div#container {
+      height: 200px;
+      width: 300px;
+      overflow: scroll;
+      border-radius: 5px;
+      margin: 10px;
+      border: 1px solid #AAAAAA;
+    }
 
+    div#content {
+      height: 1000px;
+      outline: none;
+      padding: 10px;
+    }
+      
     </style>
     <!-- Site NOT made with Mobirise Website Builder v5.6.5, https://mobirise.com -->
     <meta charset="UTF-8">

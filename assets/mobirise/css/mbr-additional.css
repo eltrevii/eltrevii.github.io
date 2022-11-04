@@ -758,7 +758,7 @@ a {
 }
 .cid-tm9jIiwDjG .dropdown-menu,
 .cid-tm9jIiwDjG .navbar.opened {
-  background: #ffffff !important;
+  background: #353535 !important;
 }
 .cid-tm9jIiwDjG .nav-item:focus,
 .cid-tm9jIiwDjG .nav-link:focus {
@@ -792,7 +792,7 @@ a {
   min-height: 70px;
   transition: all 0.3s;
   border-bottom: 1px solid transparent;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(53, 53, 53, 0);
 }
 .cid-tm9jIiwDjG .navbar.opened {
   transition: all 0.3s;
@@ -942,7 +942,7 @@ a {
   padding: 0.667em 1.667em;
 }
 .cid-tm9jIiwDjG .navbar.navbar-expand-lg .dropdown .dropdown-menu {
-  background: #ffffff;
+  background: #353535;
 }
 .cid-tm9jIiwDjG .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
   margin: 0;
@@ -973,7 +973,7 @@ a {
   width: 30px;
   height: 2px;
   border-right: 5px;
-  background-color: #353535;
+  background-color: #ffffff;
 }
 .cid-tm9jIiwDjG button.navbar-toggler .hamburger span:nth-child(1) {
   top: 0;
@@ -1069,9 +1069,6 @@ a {
 .cid-tm9lhssiVb .mbr-section-btn {
   color: #8e8d8d;
 }
-.cid-tm9n2gyQMM {
-  background-color: #000000;
-}
 .cid-tm9n2gyQMM .mbr-fallback-image.disabled {
   display: none;
 }
@@ -1083,4 +1080,5 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
+  background-image: url("../../../assets/images/gatonuevo-rounded.png");
 }

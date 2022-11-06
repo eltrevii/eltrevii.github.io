@@ -1069,6 +1069,9 @@ a {
 .cid-tm9lhssiVb .mbr-section-btn {
   color: #8e8d8d;
 }
+.cid-tm9n2gyQMM {
+  background-image: url("../../../assets/images/hacker.png");
+}
 .cid-tm9n2gyQMM .mbr-fallback-image.disabled {
   display: none;
 }
@@ -1080,5 +1083,82 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-  background-image: url("../../../assets/images/gatonuevo-rounded.png");
+}
+.cid-tmqATE1tYO {
+  background-color: #000000;
+}
+.cid-tmqATE1tYO .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-tmqATE1tYO .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-tmqATE1tYO .number-wrap {
+  color: #353535;
+  text-align: center;
+}
+.cid-tmqATE1tYO .number {
+  color: #bbbbbb;
+}
+.cid-tmqATE1tYO .period {
+  display: block;
+}
+.cid-tmqATE1tYO .dot {
+  display: none;
+}
+@media (max-width: 767px) {
+  .cid-tmqATE1tYO .period {
+    font-size: 0.8rem;
+  }
+}
+.cid-tmqATE1tYO .btn {
+  height: 100%;
+  margin: 0;
+}
+.cid-tmqATE1tYO .mbr-section-btn {
+  margin-bottom: 1.2rem;
+}
+.cid-tmqATE1tYO .mbr-section-title {
+  color: #ffffff;
+}
+.cid-tmqATE1tYO .mbr-text {
+  color: #ffffff;
+}
+.cid-tmqATE1tYO .icons-menu .soc-item {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.cid-tmqATE1tYO .icons-menu .soc-item .mbr-iconfont {
+  font-size: 2rem;
+  display: flex;
+  border-radius: 50%;
+  text-align: center;
+  color: #232323;
+  border: 2px solid #232323;
+  justify-content: center;
+  align-content: center;
+  transition: all 0.3s;
+}
+.cid-tmqATE1tYO .icons-menu .soc-item .mbr-iconfont:before {
+  padding: 0.6rem;
+}
+.cid-tmqATE1tYO .icons-menu .soc-item .mbr-iconfont:hover {
+  background-color: #232323;
+  color: #ffffff;
+}
+.cid-tmqATE1tYO H3 {
+  color: #ff6666;
+}
+.cid-tmqATE1tYO .mbr-text,
+.cid-tmqATE1tYO .mbr-section-btn {
+  color: #bbbbbb;
+}
+.cid-tmqATE1tYO .mbr-section-subtitle {
+  color: #1c1c1c;
 }

@@ -63,7 +63,9 @@
     "witsec-jquery": "3.6.0",
     "usedWebp": true,
     "witsec-white-label": true,
-    "gdpr": false
+    "gdpr": false,
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@"
   },
   "pages": {
     "index.html": {

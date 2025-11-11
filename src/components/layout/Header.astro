@@ -2,9 +2,14 @@
 import Navigation from './Navigation.astro';
 import { Image } from 'astro:assets';
 ---
-<header>
-    <nav class="flex card title gap-3 justify-between">
-        <Image src="/favicon.ico" alt="cat icon" width="32" height="32" />
-        <Navigation />
-    </nav>
-</header>
+<div id="header">
+    <header class="bg-black/35 rounded-md">
+        <nav class="flex items-start flex-wrap card title gap-4 justify-between box-content">
+            <div class="flex gap-4 items-center">
+                <Image class loading="eager" src="/favicon.ico" alt="cat icon" width="32" height="32" />
+                <h1 class="">trevi's website</h1>
+            </div>
+            <Navigation />
+        </nav>
+    </header>
+</div>

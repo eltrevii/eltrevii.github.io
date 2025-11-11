@@ -1,0 +1,8 @@
+---
+const { title } = Astro.props;
+---
+<div class="group">
+<details class="bg-black/35 [&,&>*]:rounded-md p-1 group-has-[details:open]:p-2 my-1">
+    <summary class="transition-[padding] delay-50 duration-150 cursor-pointer px-1 py-0 rounded-md border-b-2 border-white/35 border-none group-has-[details:open]:border-solid group-has-[details:open]:bg-black/30 group-has-[details:open]:px-2 group-has-[details:open]:py-1">{title}</summary>
+<pre class="transition-transform duration-300 bg-black/35 px-[1ch] py-1 group-has-[details:open]:mt-2"><slot /></pre></details>
+</div>

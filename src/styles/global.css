@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
+:root {
+    --t-space: 3;
+
+    --t-link-color: orange;
+}
+
 @layer base {
-    body {
-        padding-left: --spacing(3);
-        padding-right: --spacing(3);
-    }
     h1 {
         font-size: var(--text-2xl);
     }
@@ -15,8 +17,6 @@
 
 @layer components {
     .card {
-        background-color: var(--color-yellow-800);
-        border-radius: var(--radius-lg);
         padding: --spacing(3);
         margin-top: --spacing(3);
         margin-bottom: --spacing(3);
@@ -25,14 +25,42 @@
     .card-alt {
         background-color: var(--color-yellow-900);
         padding: --spacing(2) --spacing(3);
-        margin-top: --spacing(1);
-        margin-bottom: --spacing(1);
+        margin-top: 0;
+        margin-bottom: 0;
     }
-    .card-link {
-        padding: --spacing(1);
-    }  
 }
 
-a[aria-current="page"] {
-    color: orange;
+a:not([aria-current="page"]) {
+    color: var(--t-link-color);
+    text-decoration: underline;
+    text-underline-offset: --spacing(0.5);
 }
+/*
+details[open] summary {
+  border-bottom: 2px solid #888;
+  background-color: #555;
+  transition: var(--transition);
+  outline-offset: -2px;
+}/*
+details[open] pre {
+    margin-top: --spacing(2);
+}*/
+/*
+details:not([disabled]):not([open]):hover {
+  background-color: #444;
+  transition: var(--transition);
+}
+
+details:not([disabled])[open]:hover summary {
+  background-color: #444;
+  outline: 2px solid #444;
+}
+
+details:not([disabled])[open]:hover pre {
+  background-color: #222;
+}
+
+details:not([disabled])[open]:hover {
+  background-color: #333;
+}
+  */

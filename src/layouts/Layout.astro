@@ -4,7 +4,7 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en" class="dark:bg-yellow-700 text-gray-200">
+<html lang="en" class="bg-yellow-700 text-gray-200">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,7 +19,7 @@ import "../styles/global.css";
 					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Funnel+Display',
 					preload: true,
 					display: "swap",
-					selector: ".title",
+					selector: "h1, .title",
 					fallback: "sans-serif",
 				},
 				{
@@ -28,7 +28,7 @@ import "../styles/global.css";
 					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap',
 					preload: true,
 					display: "swap",
-					selector: "details summary",
+					selector: "a, details summary",
 					fallback: "sans-serif",
 				},
 				{
@@ -40,10 +40,21 @@ import "../styles/global.css";
 					selector: "pre",
 					fallback: "sans-serif",
 				},
+				{
+					src: [],
+					name: "Fira Sans",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap',
+					preload: true,
+					display: "swap",
+					selector: "body",
+					fallback: "sans-serif",
+				},
 			]}
 		/>
 	</head>
-	<body>
-		<slot />
+	<body class="size-full px-4 max-w-5xl justify-self-center">
+		<div class="flex flex-col h-screen justify-between">
+			<slot />
+		</div>
 	</body>
 </html>

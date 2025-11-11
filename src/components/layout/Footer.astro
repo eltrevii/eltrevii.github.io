@@ -1,7 +1,9 @@
 ---
 import Social from './Social.astro';
 ---
-<footer class="subtitle flex card gap-3">
-    <Social platformName="github" platformURL="github.com" username="eltrevii" />
-    <Social platformName="twitter" platformURL="twitter.com" username="trevics_" />
-</footer>
+<div id="footer">
+    <footer class="flex flex-wrap justify-around card gap-4 mt-4 bg-black/35 [&,&>*]:rounded-md">
+        <Social platformName="github" platformURL="github.com" username="eltrevii" />
+        <Social platformName="youtube" platformURL="youtube.com" username="@trevics_" />
+    </footer>
+</div>

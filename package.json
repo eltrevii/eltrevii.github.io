@@ -1,0 +1,21 @@
+{
+  "name": "trevics-web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "astro telemetry disable",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@sentry/astro": "^10.24.0",
+    "@spotlightjs/astro": "^3.2.6",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.15.5",
+    "astro-font": "^1.1.0",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^4.1.17"
+  }
+}

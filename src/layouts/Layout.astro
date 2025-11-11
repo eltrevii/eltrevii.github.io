@@ -1,0 +1,49 @@
+---
+import { AstroFont } from "astro-font";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en" class="dark:bg-yellow-700 text-gray-200">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>trevi's website</title>
+		<AstroFont
+			config={[
+				{
+					src: [],
+					name: "Funnel Display",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Funnel+Display',
+					preload: true,
+					display: "swap",
+					selector: ".title",
+					fallback: "sans-serif",
+				},
+				{
+					src: [],
+					name: "Chakra Petch",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap',
+					preload: true,
+					display: "swap",
+					selector: "details summary",
+					fallback: "sans-serif",
+				},
+				{
+					src: [],
+					name: "Space Mono",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap',
+					preload: true,
+					display: "swap",
+					selector: "pre",
+					fallback: "sans-serif",
+				},
+			]}
+		/>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

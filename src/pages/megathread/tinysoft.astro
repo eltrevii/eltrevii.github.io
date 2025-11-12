@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+
+import Dropdown from '../../components/ui/Dropdown.astro';
+import Header2 from '../../components/layout/megathread/Header2.astro';
+---
+
+<Layout>
+	<Header />
+	<Header2 />
+	<div class="mb-auto">
+		<h1>cpu/gpu info</h1>
+
+		<Dropdown title="cpu-z 2.16">
+* <a href="/dl/tinysoft/cpu-z_2.16-en.exe">installer</a>
+* <a href="/dl/tinysoft/cpu-z_2.16-en.exe">zip</a>
+		</Dropdown>
+
+  		<h1>techpowerup</h1>
+
+		<Dropdown title="realtemp 3.70">
+* <a href="/dl/tinysoft/RealTemp_370.zip">zip</a>
+		</Dropdown>
+
+		<Dropdown title="hwinfo 8.30 (portable)">
+* <a href="/dl/tinysoft/HWiNFO64.exe">x64</a>
+* <a href="/dl/tinysoft/HWiNFO32.exe">x86</a>
+		</Dropdown>
+	</div>
+	<Footer />
+</Layout>

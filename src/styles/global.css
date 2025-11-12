@@ -7,11 +7,14 @@
 }
 
 @layer base {
+    body {
+        font-size: var(--text-lg);
+    }
     h1 {
-        font-size: var(--text-2xl);
+        font-size: var(--text-3xl);
     }
     h2 {
-        font-size: var(--text-xl);
+        font-size: var(--text-2xl);
     }
 }
 
@@ -31,9 +34,24 @@
 }
 
 a:not([aria-current="page"]) {
-    color: var(--t-link-color);
     text-decoration: underline;
     text-underline-offset: --spacing(0.5);
+}
+a[aria-current="page"] {
+    color: var(--t-link-color);
+    font-weight: bold;
+}
+::-webkit-scrollbar {
+  width: --spacing(4);
+}
+::-webkit-scrollbar-track {
+  background: #a73d01;
+}
+::-webkit-scrollbar-thumb {
+  background: #d17123;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #df8028;
 }
 /*
 details[open] summary {

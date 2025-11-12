@@ -1,0 +1,7 @@
+---
+const { pathname } = Astro.url;
+---
+<div id="main-menu" class="navlinks flex flex-wrap gap-3 self-center justify-center w-full">
+    <a class="text-xl" aria-current={pathname.slice(1) === 'megathread' ? 'page' : 'false'} href="/megathread">main</a>
+    <a class="text-xl" aria-current={pathname.slice(1) === 'megathread/tinysoft' ? 'page' : 'false'} href="/megathread/tinysoft">software</a>
+</div>

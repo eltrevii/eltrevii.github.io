@@ -11,10 +11,13 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "astro"
+  cancel-in-progress: true
+  
 jobs:
   build:
-    runs-on: ubuntu-slim
-    steps:
+    runs-on: ubuntu-ubeps:
       - name: Git Checkout
         uses: actions/checkout@v5
 
@@ -28,7 +31,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
 
     environment:
       name: github-pages

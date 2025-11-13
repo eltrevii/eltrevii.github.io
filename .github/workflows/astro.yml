@@ -1,1 +1,40 @@
-.gitkeep
+name: Astro - GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+permisssions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v5
+
+      - name: Astro Build & Deploy
+        uses: withastro/action@v5
+        with:
+          path: .
+          # node-version: 22
+          package-manager: pnpm@latest
+          # build-cmd: pnpm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-slim
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: GitHub Pages deployment
+        id: deployment
+        uses: actions/deploy-pages@v4

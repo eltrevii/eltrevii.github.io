@@ -12,6 +12,7 @@ process.env.ASTRO_TELEMETRY_DISABLED = '1';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://eltrevii.github.io',
   integrations: [sentry({
     telemetry: false
   }), spotlightjs(), icon()],

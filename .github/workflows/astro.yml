@@ -17,7 +17,7 @@ concurrency:
   
 jobs:
   build:
-    runs-on: ubuntu-ubeps:
+    runs-on: ubuntu-latest
       - name: Git Checkout
         uses: actions/checkout@v5
 

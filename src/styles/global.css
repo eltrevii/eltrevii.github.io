@@ -3,7 +3,8 @@
 :root {
     --t-space: 3;
 
-    --t-link-color: orange;
+    --t-link-color: #ffa500;
+    --t-link-hover-color: #e70;
 }
 
 @layer base {
@@ -33,13 +34,30 @@
     }
 }
 
-a:not([aria-current="page"]) {
+a {
+    color: var(--t-link-color);
     text-decoration: underline;
     text-underline-offset: --spacing(0.5);
 }
-a[aria-current="page"] {
-    color: var(--t-link-color);
+a:hover {
+    /*color: var(--t-link-hover-color);*/
+    /*background-color: #ffff0055;*/
+    text-shadow: 0 0 10px orange;
+}
+:not(.navlinks) > a::before {
+  content: "[";
+}
+:not(.navlinks) > a::after {
+  content: "]";
+}
+nav a[aria-current="page"] {
+    text-decoration: none;
     font-weight: bold;
+}
+nav a:not([aria-current="page"]) {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: --spacing(0.5);
 }
 ::-webkit-scrollbar {
   width: --spacing(4);

@@ -17,13 +17,19 @@
     h2 {
         font-size: var(--text-2xl);
     }
+    div#main-content {
+      margin-top: --spacing(3);
+    }
+    footer {
+      margin-bottom: --spacing(3);
+    }
 }
 
 @layer components {
     .card {
         padding: --spacing(3);
         margin-top: --spacing(3);
-        margin-bottom: --spacing(3);
+        /*margin-bottom: --spacing(3);*/
         box-shadow: var(--shadow-lg);
     }
     .card-alt {

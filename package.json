@@ -1,7 +1,7 @@
 {
   "name": "trevics-web",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "postinstall": "astro telemetry disable",
     "dev": "astro dev",

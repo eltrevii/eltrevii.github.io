@@ -1,8 +1,0 @@
----
-const { pathname } = Astro.url;
-const curPage = pathname.slice(1);
----
-<div id="main-menu" class="navlinks flex flex-wrap gap-3 self-center [&>*]:text-xl">
-    <a aria-current={curPage === '' ? 'page' : 'false'} href="/">home</a>
-    <a aria-current={curPage.startsWith('megathread') ? 'page' : 'false'} href="/megathread">megathread</a>
-</div>

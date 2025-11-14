@@ -1,0 +1,22 @@
+---
+import Header from "../modular/Header.astro";
+import Navigation from "../modular/Navigation.astro";
+
+import { Image } from 'astro:assets';
+
+const { pathname } = Astro.url;
+const curPage = pathname.slice(1);
+const curPageS = ( curPage === '' ? ' / ' : curPage.replace(/\//g, " / ") )
+---
+<Header>
+    <!-- slot nav-left -->
+    <Image slot="nav-left" loading="eager" src="/favicon.ico" alt="cat icon" width="32" height="32" />
+    <h2 slot="nav-left">trevi's website</h2>
+    <!-- slot nav-center -->
+    <p slot="nav-center" class="italic text-white/50">{curPageS}</p>
+    <!-- slot nav-right -->
+    <Navigation slot="nav-right">
+        <a aria-current={curPage === '' ? 'page' : 'false'} href="/">home</a>
+        <a aria-current={curPage.startsWith('megathread/') ? 'page' : 'false'} href="/megathread/">megathread</a>
+    </Navigation>
+</Header>

@@ -1,0 +1,18 @@
+---
+import Header from "../modular/Header.astro";
+import Navigation from "../modular/Navigation.astro";
+
+const { pathname } = Astro.url;
+const curPage = pathname.slice(1);
+---
+<Header>
+    <!-- slot nav-left -->
+
+    <!-- slot nav-center -->
+    <Navigation slot="nav-center">
+        <a aria-current={curPage === 'megathread/' ? 'page' : 'false'} href="/megathread/">main</a>
+        <a aria-current={curPage === 'megathread/tinysoft/' ? 'page' : 'false'} href="/megathread/tinysoft/">software</a>
+    </Navigation>
+    <!-- slot nav-right -->
+    
+</Header>

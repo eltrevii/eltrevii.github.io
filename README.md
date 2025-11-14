@@ -1,7 +1,7 @@
 # trevi's website
 nothing to see here, im still building it
 
-whenever it is finished you could see it [here](https://eltrevii.github.io) so couit out
+it is not finished yet but you can see it [here](https://eltrevii.github.io) so check it out
 
 ## todo
 - [ ] make main website (what should it even have?)

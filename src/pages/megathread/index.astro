@@ -1,16 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/layout/Header.astro';
+import MainHeader from '../../components/layout/headers/MainHeader.astro';
+import MegathreadHeader from '../../components/layout/headers/MegathreadHeader.astro';
 import Footer from '../../components/layout/Footer.astro';
 
 import Dropdown from '../../components/ui/Dropdown.astro';
-import Header2 from '../../components/layout/megathread/Header2.astro';
 ---
 
 <Layout>
-	<Header />
-	<Header2 />
-	<div class="mb-auto">
+	<MainHeader />
+	<MegathreadHeader />
+	
+	<div class="mb-auto" id="main-content">
 		<h1>counter-strike 2</h1>
 		<Dropdown title="mods/configs">
 * <a href="https://github.com/xPaw/CS2" aria-label="counter-strike 2 practice config">CS2 PRACTICE CONFIG</a>

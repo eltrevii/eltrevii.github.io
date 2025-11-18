@@ -61,7 +61,7 @@ a {
 a:hover {
     /*color: var(--t-link-hover-color);*/
     /*background-color: #ffff0055;*/
-    text-shadow: 0 0 10px orange;
+    /*text-shadow: 0 0 10px orange;*/
 }
 :not(.navlinks) > a::before {
   content: "[";

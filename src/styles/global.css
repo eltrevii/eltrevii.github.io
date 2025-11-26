@@ -43,7 +43,7 @@
 body::before {
 		z-index: -1;
 		content: "";
-		background-image: url('/src/images/jjk-bg.png');
+		background-image: url('/src/images/bg-1920x1080.webp');
 		background-size: cover;
 		position: fixed;
 		top: 0px;

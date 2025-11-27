@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "upgrade": "corepack prepare pnpm@latest --activate && pnpm dlx @astrojs/upgrade",
     "astro": "astro",
-    "prepare": "husky"
+    "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
     "@sentry/astro": "^10.24.0",

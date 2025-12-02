@@ -1,67 +1,52 @@
 @import "tailwindcss";
 
 :root {
-    --t-space: 3;
+  --t-space: 3;
 
-    --t-link-color: #ffa500;
-    --t-link-hover-color: #e70;
+  --t-link-color: #ffa500;
+  --t-link-hover-color: #e70;
 }
 
 @layer base {
-    body {
-        font-size: var(--text-lg);
-    }
-    h1 {
-        font-size: var(--text-3xl);
-    }
-    h2 {
-        font-size: var(--text-2xl);
-    }
-    div#main-content {
-      margin-top: --spacing(3);
-    }
-    footer {
-      margin-bottom: --spacing(3);
-    }
+  body {
+    @apply text-lg;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  div#main-content {
+    @apply mt-3;
+  }
+  footer {
+    @apply mb-3;
+  }
 }
 
 @layer components {
-    .card {
-        padding: --spacing(3);
-        margin-top: --spacing(3);
-        /*margin-bottom: --spacing(3);*/
-        box-shadow: var(--shadow-lg);
-    }
-    .card-alt {
-        background-color: var(--color-yellow-900);
-        padding: --spacing(2) --spacing(3);
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  .card {
+    @apply p-3 mt-3 shadow-lg;
+  }
+  .card-alt {
+    @apply bg-yellow-900 px-2 py-3 my-0;
+  }
 }
 
 body::before {
-		z-index: -1;
-		content: "";
-		background-image: url('/src/images/bg-1920x1080.webp');
-		background-size: cover;
-		position: fixed;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		opacity: 0.75;
-	}
+  @apply fixed inset-0 -z-1 content-[""] bg-cover bg-[url('/src/images/bg-1920x1080.webp')] opacity-75;
+}
 
 a {
-    color: var(--t-link-color);
-    text-decoration: underline;
-    text-underline-offset: --spacing(0.5);
+  color: var(--t-link-color);
+  text-decoration: underline;
+  text-underline-offset: --spacing(0.5);
 }
 :not(#main-menu) > a:hover {
-    /*color: var(--t-link-hover-color);*/
-    /*background-color: #ffff0055;*/
-    text-shadow: 0 0 10px orange;
+  /*color: var(--t-link-hover-color);*/
+  /*background-color: #ffff0055;*/
+  text-shadow: 0 0 10px orange;
 }
 :not(.navlinks) > a::before {
   content: "[";
@@ -70,13 +55,10 @@ a {
   content: "]";
 }
 nav a[aria-current="page"] {
-    text-decoration: none;
-    font-weight: bold;
+  @apply no-underline font-bold;
 }
 nav a:not([aria-current="page"]) {
-    color: var(--color-white);
-    text-decoration: underline;
-    text-underline-offset: --spacing(0.5);
+  @apply text-white underline underline-offset-2;
 }
 ::-webkit-scrollbar {
   width: --spacing(4);

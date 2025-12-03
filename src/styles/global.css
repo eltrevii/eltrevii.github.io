@@ -54,11 +54,13 @@ a {
   /*background-color: #ffff0055;*/
   text-shadow: 0 0 10px orange;
 }
-:not(.navlinks) > a:not(.nh)::before {
-  content: "[";
-}
-:not(.navlinks) > a:not(.nh)::after {
-  content: "]";
+:not(.navlinks) > a:not(.nh) {
+  &:before {
+    content: "[";
+  }
+  &:after {
+    content: "]";
+  }
 }
 nav a[aria-current="page"] {
   @apply no-underline font-bold;

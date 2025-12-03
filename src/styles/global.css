@@ -18,10 +18,13 @@
     @apply text-2xl;
   }
   div#main-content {
-    @apply mt-3;
+    @apply mt-3 mb-auto;
   }
   footer {
     @apply mb-3;
+  }
+  li::before {
+    @apply inline-block content-["~"] text-2xl/1 mr-3;
   }
 }
 
@@ -43,15 +46,18 @@ a {
   text-decoration: underline;
   text-underline-offset: --spacing(0.5);
 }
+#tag {
+  @apply px-2 py-1 rounded-md bg-indigo-900/35 backdrop-blur;
+}
 :not(#main-menu) > a:hover {
   /*color: var(--t-link-hover-color);*/
   /*background-color: #ffff0055;*/
   text-shadow: 0 0 10px orange;
 }
-:not(.navlinks) > a::before {
+:not(.navlinks) > a:not(.nh)::before {
   content: "[";
 }
-:not(.navlinks) > a::after {
+:not(.navlinks) > a:not(.nh)::after {
   content: "]";
 }
 nav a[aria-current="page"] {

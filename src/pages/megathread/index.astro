@@ -8,10 +8,9 @@ import Dropdown from '../../components/ui/Dropdown.astro';
 ---
 
 <Layout>
-	<MainHeader />
-	<MegathreadHeader />
+	<MainHeader slot="headers" />
+	<MegathreadHeader slot="headers" />
 	
-	<div class="mb-auto" id="main-content">
 		<h1>counter-strike 2</h1>
 		<Dropdown title="mods/configs">
 * <a href="https://github.com/xPaw/CS2" aria-label="counter-strike 2 practice config">CS2 PRACTICE CONFIG</a>
@@ -421,6 +420,6 @@ x jujutsu kaisen (2025-11-27)
 * Vicente Canuto | Cartomagia Fundamental <a href="https://en.z-library.sk/dl/27957597/e2881a">.pdf</a>, <a href="https://en.z-library.sk/dl/11091569/35d67d">.epub</a>
 		</Dropdown>
 		<!-- #endregion -->
-	</div>
-	<Footer />
+
+	<Footer slot="footer" />
 </Layout>

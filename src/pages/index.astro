@@ -5,10 +5,10 @@ import Footer from '../components/layout/Footer.astro';
 ---
 
 <Layout>
-	<MainHeader />
-	<div class="mb-auto" id="main-content">
-		<h1>hello world</h1>
-		<p>im trevi</p>
-	</div>
-	<Footer />
+	<MainHeader slot="headers" />
+
+	<h1>hello world</h1>
+	<p>im trevi</p>
+
+	<Footer slot="footer" />
 </Layout>

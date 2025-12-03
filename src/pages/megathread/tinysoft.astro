@@ -8,27 +8,25 @@ import Dropdown from '../../components/ui/Dropdown.astro';
 ---
 
 <Layout>
-	<MainHeader />
-	<MegathreadHeader />
+	<MainHeader slot="headers" />
+	<MegathreadHeader slot="headers" />
 
-	<div class="mb-auto" id="main-content">
-		<h1>cpu/gpu info</h1>
+	<h1>cpu/gpu info</h1>
 
-		<Dropdown title="cpu-z 2.16">
+	<Dropdown title="cpu-z 2.16">
 * <a href="/dl/tinysoft/cpu-z_2.16-en.exe">exe (installer)</a>
 * <a href="/dl/tinysoft/cpu-z_2.16-en.exe">zip</a>
-		</Dropdown>
+	</Dropdown>
 
-  		<h1>techpowerup</h1>
+	<h1>techpowerup</h1>
 
-		<Dropdown title="realtemp 3.70">
+	<Dropdown title="realtemp 3.70">
 * <a href="/dl/tinysoft/RealTemp_370.zip">zip</a>
-		</Dropdown>
+	</Dropdown>
 
-		<Dropdown title="hwinfo 8.30 (portable)">
+	<Dropdown title="hwinfo 8.30 (portable)">
 * <a href="/dl/tinysoft/HWiNFO64.exe">x64</a>
 * <a href="/dl/tinysoft/HWiNFO32.exe">x86</a>
-		</Dropdown>
-	</div>
-	<Footer />
+	</Dropdown>
+	<Footer slot="footer" />
 </Layout>

@@ -17,17 +17,25 @@
   h2 {
     @apply text-2xl;
   }
+  a {
+    color: var(--t-link-color);
+    text-decoration: underline;
+    text-underline-offset: --spacing(0.5);
+  }
   div#main-content {
     @apply mt-3 mb-auto;
-  }
-  footer {
-    @apply mb-3;
   }
   li::before {
     @apply inline-block content-["~"] text-2xl/1 mr-3;
   }
   #mdContent :is(h1, p) {
     @apply leading-none my-2;
+  }
+  #tag {
+    @apply px-2 py-1 rounded-md bg-indigo-500/35 backdrop-blur;
+  }
+  :not(#main-menu) > a:hover {
+    text-shadow: 0 0 10px orange;
   }
 }
 
@@ -36,27 +44,27 @@
     @apply p-3 mt-3 shadow-lg;
   }
   .card-alt {
-    @apply bg-yellow-900 px-2 py-3 my-0;
+    @apply px-2 py-3 my-0;
+  }
+  .striped {
+    background: repeating-linear-gradient(
+      135deg,
+      #f2f 0,
+      #f2f 2px,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 10px 10px;
+    background-attachment: fixed;
   }
 }
-
+/* BACKGROUND !!!
 body::before {
   @apply fixed inset-0 -z-1 content-[""] bg-cover bg-[url('/src/images/bg-1920x1080.webp')] opacity-50;
 }
+*/
 
-a {
-  color: var(--t-link-color);
-  text-decoration: underline;
-  text-underline-offset: --spacing(0.5);
-}
-#tag {
-  @apply px-2 py-1 rounded-md bg-indigo-900/35 backdrop-blur;
-}
-:not(#main-menu) > a:hover {
-  /*color: var(--t-link-hover-color);*/
-  /*background-color: #ffff0055;*/
-  text-shadow: 0 0 10px orange;
-}
+/*
 :not(.navlinks) > a:not(.nh) {
   &:before {
     content: "[";
@@ -64,7 +72,7 @@ a {
   &:after {
     content: "]";
   }
-}
+}*/
 nav a[aria-current="page"] {
   @apply no-underline font-bold;
 }

@@ -1,6 +1,6 @@
 ---
-title: "title"
-description: "description"
+title: "kittyes r da bezt !!!"
+description: "kitties i love kitties yes pls more"
 author: "trevi"
 pubDate: 2025-12-02
 image:

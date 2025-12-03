@@ -7,12 +7,12 @@ const curPage = pathname.slice(1);
 ---
 <Header>
     <!-- slot nav-left -->
-
+    <p slot="nav-left">BLOG</p>
     <!-- slot nav-center -->
-    <Navigation slot="nav-center">
+
+    <!-- slot nav-right -->
+    <Navigation slot="nav-right">
         <a aria-current={curPage.startsWith('blog/') ? 'page' : 'false'} href="/blog/">all posts</a>
         <a aria-current={curPage.startsWith('tags/') ? 'page' : 'false'} href="/tags/">tags</a>
     </Navigation>
-    <!-- slot nav-right -->
-    
 </Header>

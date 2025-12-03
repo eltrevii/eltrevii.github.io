@@ -8,20 +8,22 @@ const { frontmatter } = Astro.props;
 <Layout>
     <MainHeader slot="headers" />
     <BlogHeader slot="headers" />
-    <h1>{frontmatter.title}</h1>
-    <img class="rounded-xl my-3" src={frontmatter.image.url} width="320" alt={frontmatter.image.alt} />
+    
+    <h1 class="font-bold text-5xl">{frontmatter.title}</h1>
 
-    <div class="tags mb-3 flex gap-3 items-center">
-        <h1>tags</h1>
+    <div class="tags my-3 flex gap-2 items-center">
         {frontmatter.tags.map((tag: string) => (
             <p><a id="tag" class="nh" href={`/tags/${tag}/`}>#{tag}</a></p>
         ))}
     </div>
 
-    <p>published on {frontmatter.pubDate.toLocaleDateString()}</p>
     <p><em>{frontmatter.description}</em></p>
-    <p>written by: {frontmatter.author}</p>
-    <hr class="my-3 border-dashed border-2 border-white/60">
+    <p>by {frontmatter.author} | {frontmatter.pubDate.toLocaleDateString()}</p>
+    <p></p>
+
+    <img class="rounded-xl mt-1" src={frontmatter.image.url} width="320" alt={frontmatter.image.alt} />
+    <p class="my-2 italic">image credit: <a target="_blank" href={frontmatter.image.url}>link</a></p>
+    <hr class="my-3 border-solid border-2 rounded-full border-white/60">
     <div id="mdContent">
         <slot />
     </div>

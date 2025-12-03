@@ -1,0 +1,26 @@
+---
+import Layout from "./Layout.astro";
+import MainHeader from "../components/layout/headers/MainHeader.astro"
+import Footer from "../components/layout/Footer.astro"
+const { frontmatter } = Astro.props;
+---
+<Layout>
+    <MainHeader slot="headers" />
+    <h1>{frontmatter.title}</h1>
+    <img class="rounded-xl my-3" src={frontmatter.image.url} width="320" alt={frontmatter.image.alt} />
+
+    <div class="tags mb-3 flex gap-3 items-center">
+        <h1>tags</h1>
+        {frontmatter.tags.map((tag: string) => (
+            <p><a id="tag" class="nh" href={`/tags/${tag}/`}>#{tag}</a></p>
+        ))}
+    </div>
+
+    <p>published on {frontmatter.pubDate.toLocaleDateString()}</p>
+    <p><em>{frontmatter.description}</em></p>
+    <p>written by: {frontmatter.author}</p>
+    <hr class="my-3 border-dashed border-2 border-white/60">
+
+    <slot />
+    <Footer slot="footer" />
+</Layout>

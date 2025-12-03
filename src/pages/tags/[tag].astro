@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+import MainHeader from "../../components/layout/headers/MainHeader.astro";
+import Footer from "../../components/layout/Footer.astro";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("blog");
+    
+    const uniqueTags = [...new Set(allPosts.map((post: any) => post.data.tags).flat())]
+    return uniqueTags.map((tag) => {
+        const filteredPosts = allPosts.filter((post: any) => post.data.tags.includes(tag));
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+<Layout>
+    <MainHeader slot="headers" />
+    <p>posts tagged with <span class="italic text-2xl">#{tag}</span></p>
+    <ul>
+        {posts.map((post: any) => <li><a class="nh" href={`/posts/${post.id}/`}>{post.data.title}</a></li>)}
+    </ul>
+    <Footer slot="footer" />
+</Layout>

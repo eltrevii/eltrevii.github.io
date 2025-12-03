@@ -54,8 +54,11 @@ import "../styles/global.css";
 	</head>
 	<body id="body" class="size-full justify-self-center">
 		<div id="contflex" class="flex flex-col w-full h-screen px-4 max-w-5xl justify-between justify-self-center">
-			<slot />
-		</div>
+			<slot name="headers" />
+			<div id="main-content">
+				<slot />
+			</div>
+			<slot name="footer" />
 		</div>
 	</body>
 </html>

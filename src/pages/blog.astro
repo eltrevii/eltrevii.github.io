@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import MainHeader from "../components/layout/headers/MainHeader.astro";
+import Footer from "../components/layout/Footer.astro";
+
+const posts = (await getCollection("blog")).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
+---
+<Layout>
+    <MainHeader slot="headers" />
+    <h1>my blog posts here</h1>
+    <ul class="mt-3">
+        {posts.map(post => (
+            <li><a href={`/posts/${post.id}/`}>{post.data.title}</a> | {post.data.pubDate.toLocaleDateString()}</li>
+        ))}
+    </ul>
+    <Footer slot="footer" />
+</Layout>

@@ -22,7 +22,8 @@ const { frontmatter } = Astro.props;
     <p><em>{frontmatter.description}</em></p>
     <p>written by: {frontmatter.author}</p>
     <hr class="my-3 border-dashed border-2 border-white/60">
-
-    <slot />
+    <div id="mdContent">
+        <slot />
+    </div>
     <Footer slot="footer" />
 </Layout>

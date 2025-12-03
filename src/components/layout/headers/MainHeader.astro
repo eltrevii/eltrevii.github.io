@@ -18,7 +18,6 @@ const curPageS = ( curPage === '' ? ' / ' : curPage.replace(/\//g, " / ") )
     <Navigation slot="nav-right">
         <a aria-current={curPage === '' ? 'page' : 'false'} href="/">home</a>
         <a aria-current={curPage.startsWith('megathread/') ? 'page' : 'false'} href="/megathread/">megathread</a>
-        <a aria-current={curPage.startsWith('blog/') ? 'page' : curPage.startsWith('posts/') ? 'page' : 'false'} href="/blog/">blog</a>
-        <a aria-current={curPage.startsWith('tags/') ? 'page' : 'false'} href="/tags/">tags</a>
+        <a aria-current={curPage.startsWith('blog/') ? 'page' : (curPage.startsWith('tags/') ? 'page' : (curPage.startsWith('posts/') ? 'page' : 'false'))} href="/blog/">blog</a>
     </Navigation>
 </Header>

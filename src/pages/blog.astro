@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import MainHeader from "../components/layout/headers/MainHeader.astro";
+import BlogHeader from "../components/layout/headers/BlogHeader.astro";
 import Footer from "../components/layout/Footer.astro";
 
 const posts = (await getCollection("blog")).sort(
@@ -10,6 +11,7 @@ const posts = (await getCollection("blog")).sort(
 ---
 <Layout>
     <MainHeader slot="headers" />
+    <BlogHeader slot="headers" />
     <h1>my blog posts here</h1>
     <ul class="mt-3">
         {posts.map(post => (

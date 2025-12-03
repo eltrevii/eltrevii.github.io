@@ -1,11 +1,13 @@
 ---
 import Layout from "./Layout.astro";
-import MainHeader from "../components/layout/headers/MainHeader.astro"
-import Footer from "../components/layout/Footer.astro"
+import MainHeader from "../components/layout/headers/MainHeader.astro";
+import BlogHeader from "../components/layout/headers/BlogHeader.astro";
+import Footer from "../components/layout/Footer.astro";
 const { frontmatter } = Astro.props;
 ---
 <Layout>
     <MainHeader slot="headers" />
+    <BlogHeader slot="headers" />
     <h1>{frontmatter.title}</h1>
     <img class="rounded-xl my-3" src={frontmatter.image.url} width="320" alt={frontmatter.image.alt} />
 

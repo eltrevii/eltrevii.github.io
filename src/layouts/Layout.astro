@@ -52,10 +52,10 @@ import "../styles/global.css";
 			]}
 		/>
 	</head>
-	<body id="body" class="size-full justify-self-center">
-		<div id="contflex" class="flex flex-col w-full h-screen px-3 max-w-5xl justify-between justify-self-center">
+	<body id="body" class="min-h-screen w-full justify-self-center">
+		<div id="contflex" class="min-h-screen flex flex-col w-full px-3 max-w-5xl justify-between justify-self-center mx-auto">
 			<slot name="headers" />
-			<div id="main-content">
+			<div id="main-content" class="grow">
 				<slot />
 			</div>
 			<slot name="footer" />

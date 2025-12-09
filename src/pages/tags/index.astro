@@ -11,7 +11,7 @@ const tags = [...new Set(allPosts.map((post: any) => post.data.tags).flat())];
     <MainHeader slot="headers" />
     <BlogHeader slot="headers" />
     <h1>tags</h1>
-    <div class="mb-3 flex flex-wrap gap-3">
+    <div id="tags" class="mb-3 flex flex-wrap gap-3">
         {tags.map((tag) => (
             <p id="tag"><a class="nh" href={`/tags/${tag}/`}>#{tag}</a></p>
         ))}

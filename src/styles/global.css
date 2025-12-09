@@ -34,6 +34,9 @@
   #tag {
     @apply px-2 py-1 rounded-md bg-indigo-500/35 backdrop-blur;
   }
+  #tags {
+    @apply my-3;
+  }
   :not(#main-menu) > a:hover {
     text-shadow: 0 0 10px orange;
   }

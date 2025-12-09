@@ -13,7 +13,7 @@ const curPageS = ( curPage === '' ? ' / ' : curPage.replace(/\//g, " / ") )
     <Image slot="nav-left" loading="eager" src="/favicon.ico" alt="cat icon" width="32" height="32" />
     <h2 slot="nav-left">trevi's website</h2>
     <!-- slot nav-center -->
-    <p slot="nav-center" class="italic text-white/50">{curPageS}</p>
+    <p slot="nav-center" class="italic text-white/70">{curPageS}</p>
     <!-- slot nav-right -->
     <Navigation slot="nav-right">
         <a aria-current={curPage === '' ? 'page' : 'false'} href="/">home</a>

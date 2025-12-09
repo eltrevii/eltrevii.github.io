@@ -52,12 +52,12 @@
   .striped {
     background: repeating-linear-gradient(
       135deg,
-      #f2f 0,
-      #f2f 2px,
-      transparent 0,
-      transparent 50%
+      #ffffff22 0,
+      #ffffff22 6px,
+      #00000022 0,
+      #00000022 50%
     );
-    background-size: 10px 10px;
+    background-size: 18px 18px;
     background-attachment: fixed;
   }
 }

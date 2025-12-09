@@ -2,8 +2,10 @@
 import Social from './Social.astro';
 ---
 <div id="footer">
-    <footer class="flex flex-wrap justify-center card gap-3 my-3 bg-black/35 [&,&>*]:rounded-md">
-        <Social platformName="github" platformURL="github.com" username="eltrevii" />
-        <Social platformName="youtube" platformURL="youtube.com" username="@trevics_" />
+    <footer class="bg-linear-to-b from-gray-500 to-black flex flex-wrap justify-center card my-3 p-0 [&,&>*]:rounded-md">
+        <div class="striped w-full flex flex-wrap items-center justify-center gap-3 py-3 [&,&>*]:rounded-md">
+            <Social platformName="github" platformURL="github.com" username="eltrevii" />
+            <Social platformName="youtube" platformURL="youtube.com" username="@trevics_" />
+        </div>
     </footer>
 </div>

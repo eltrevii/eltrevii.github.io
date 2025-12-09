@@ -60,6 +60,17 @@
     background-size: 18px 18px;
     background-attachment: fixed;
   }
+  .stripedim {
+    background: repeating-linear-gradient(
+      135deg,
+      #ffffff11 0,
+      #ffffff11 6px,
+      #00000011 0,
+      #00000011 50%
+    );
+    background-size: 18px 18px;
+    background-attachment: fixed;
+  }
 }
 /* BACKGROUND !!!
 body::before {

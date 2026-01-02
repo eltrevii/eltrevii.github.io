@@ -12,7 +12,7 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "@sentry/astro": "^10.24.0",
+    "@sentry/astro": "^10.27.0",
     "@spotlightjs/astro": "^3.2.6",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "5.16.6",

@@ -29,7 +29,10 @@
     @apply inline-block content-["~"] text-2xl/1 mr-3;
   }
   #mdContent :is(h1, p) {
-    @apply leading-none my-2;
+    @apply leading-6 my-2;
+  }
+  #mdContent :is(hr) {
+    @apply my-4;
   }
   #tag {
     @apply px-2 py-1 rounded-md bg-indigo-500/35 backdrop-blur;

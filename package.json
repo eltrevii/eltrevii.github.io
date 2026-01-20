@@ -15,7 +15,7 @@
     "@sentry/astro": "^10.27.0",
     "@spotlightjs/astro": "^3.2.6",
     "@tailwindcss/vite": "^4.1.17",
-    "astro": "5.16.6",
+    "astro": "5.16.11",
     "astro-font": "^1.1.0",
     "astro-icon": "^1.1.5",
     "class-variance-authority": "^0.7.1",

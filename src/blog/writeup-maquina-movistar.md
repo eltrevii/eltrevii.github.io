@@ -9,7 +9,7 @@ image:
 tags: ["cybersec", "movistar"]
 ---
 
-Hola. Resulta que estaba yo tan tranquilo configurando los puertos de mi router Wifi 6 Go (Askey RTF8225VW), cuando decidí abrir Caido para poder inspeccionar el login de la interfaz de configuración de mi router Movistar.
+Hola. Estaba yo un lunes tan tranquilo configurando los puertos de mi router Wifi 6 Go (Askey RTF8225VW), cuando se me rompió la interfaz web de configuración y quería entrar al router por ssh, y decidí por curiosidad inspeccionar el login de la interfaz de configuración de mi router Movistar.
 
 Al interceptar la solicitud y analizar los datos que se envían al router, pude ver que el usuario predeterminado, que suele ser "1234", se había transformado en unos caracteres diferentes.
 

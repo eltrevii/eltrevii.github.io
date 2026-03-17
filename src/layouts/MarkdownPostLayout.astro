@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 <Layout>
     <MainHeader slot="headers" />
     <BlogHeader slot="headers" />
-    
+
     <h1 class="font-bold text-5xl">{frontmatter.title}</h1>
 
     <div id="tags" class="flex gap-2 items-center">
@@ -21,7 +21,9 @@ const { frontmatter } = Astro.props;
     <p>by {frontmatter.author} | {frontmatter.pubDate.toLocaleDateString()}</p>
     <p></p>
 
-    <img class="rounded-xl mt-1" src={frontmatter.image.url} width="320" alt={frontmatter.image.alt} />
+    <div class="flex grow">
+        <img class="rounded-xl mt-1 justify-self-center grow" src={frontmatter.image.url} width="800" alt={frontmatter.image.alt} />
+    </div>
     <p class="my-2 italic">image credit: <a target="_blank" href={frontmatter.image.url}>link</a></p>
     <hr class="my-3 border-solid border-2 rounded-full border-white/60">
     <div id="mdContent">

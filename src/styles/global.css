@@ -28,6 +28,11 @@
   li::before {
     @apply inline-block content-["~"] text-2xl/1 mr-3;
   }
+  #mdContent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   #mdContent :is(h1, p) {
     @apply leading-6 my-2;
   }

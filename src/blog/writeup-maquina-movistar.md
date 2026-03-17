@@ -5,7 +5,7 @@ author: "trevi"
 pubDate: 2026-03-17
 image:
   url: "/src/images/blog/writeup-ssh-movistar/banner.webp"
-  alt: "imagen de una terminal con comandos en color verde"
+  alt: "Fragmento de código de una función de cifrado muy insegura encontrada en un archivo JavaScript"
 tags: ["cybersec", "movistar"]
 ---
 

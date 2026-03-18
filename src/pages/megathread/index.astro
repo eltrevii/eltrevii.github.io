@@ -5,6 +5,8 @@ import MegathreadHeader from '../../components/layout/headers/MegathreadHeader.a
 import Footer from '../../components/layout/Footer.astro';
 
 import Dropdown from '../../components/ui/Dropdown.astro';
+
+import img_rj45 from '@images/rj45_t568a+t568b.webp';
 ---
 
 <Layout>
@@ -258,7 +260,7 @@ import Dropdown from '../../components/ui/Dropdown.astro';
 		<h1>networking</h1>
 		<Dropdown title="ethernet cables/rj45">
 * CABLE WIRING: T-568A + T-568B
-<img src="/src/images/rj45_t568a+t568b.webp" class="rounded-lg" alt="RJ-45 wiring for copper Ethernet cable pairs: T-568A and T-568B">
+<img src={img_rj45.src} width={img_rj45.width} class="rounded-lg" alt="RJ-45 wiring for copper Ethernet cable pairs: T-568A and T-568B">
 
 * <a href="https://www.cablify.ca/speeds-of-cat5e-cat6-cat6a-cat7-and-cat8-cables-compared/">cat5e -> cat8 speeds</a>
 * <a href="https://www.cablify.ca/speeds-of-cat5e-cat6-cat6a-cat7-and-cat8-cables-compared/">cat3 -> cat8 speeds + history lesson (/j)</a>

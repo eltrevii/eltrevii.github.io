@@ -24,7 +24,9 @@ const { frontmatter } = Astro.props;
     <div class="flex grow">
         <img class="rounded-xl mt-1 justify-self-center grow" src={frontmatter.image.url.src} width="800" alt={frontmatter.image.alt} />
     </div>
-    <p class="my-2 italic">image credit: <a target="_blank" href={frontmatter.image.url.src}>link</a></p>
+    { !frontmatter.image.credit ? null :
+      <p class="my-2 italic">image credit: <a target="_blank" href={frontmatter.image.credit}>link</a></p>
+    }
     <hr class="my-3 border-solid border-2 rounded-full border-white/60">
     <div id="mdContent">
         <slot />

@@ -4,7 +4,8 @@ description: "controlar un ordenador remotamente no es una broma... ¿o sí?"
 author: "trevi"
 pubDate: 2026-01-20
 image:
-  url: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-lbWFOuJyPgQ%2FUdywf-CXBbI%2FAAAAAAAAAJg%2F0c1kSEIujJE%2Fs1600%2Fimage003.png&f=1&nofb=1&ipt=0b4e306ec19f2e82c3aa43ef4382690bab21eb1292ce46791be8436f8758c8b0º"
+  url: "@images/blog/bromas-ssh/banner.webp"
+  credit: "https://3.bp.blogspot.com/-lbWFOuJyPgQ/Udywf-CXBbI/AAAAAAAAAJg/0c1kSEIujJE/s1600/image003.png"
   alt: "imagen de una terminal con comandos en color verde"
 tags: ["ssh", "bromas"]
 ---

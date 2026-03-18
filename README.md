@@ -6,5 +6,5 @@ it is not finished yet but you can see it [here](https://eltrevii.github.io) so 
 ## todo
 - [ ] make main website (what should it even have?)
 - [x] add megathread
+- [x] add blog
 - [x] add miniprograms
-- [ ] maybe add something else i find useful

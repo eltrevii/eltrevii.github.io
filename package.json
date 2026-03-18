@@ -12,15 +12,15 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "@sentry/astro": "^10.27.0",
+    "@sentry/astro": "^10.44.0",
     "@spotlightjs/astro": "^3.2.6",
-    "@tailwindcss/vite": "^4.1.17",
+    "@tailwindcss/vite": "^4.2.1",
     "astro": "5.18.0",
     "astro-font": "^1.1.0",
     "astro-icon": "^1.1.5",
     "class-variance-authority": "^0.7.1",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
     "husky": "^9.1.7",

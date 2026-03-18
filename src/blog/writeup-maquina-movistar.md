@@ -4,7 +4,7 @@ description: "mucho wifi 6 y todo lo que tú quieras, pero las contraseñas a pl
 author: "trevi"
 pubDate: 2026-03-17
 image:
-  url: "@images/blog/writeup-ssh-movistar/banner.webp"
+  url: "@images/blog/writeup-maquina-movistar/banner.webp"
   alt: "Fragmento de código de una función de cifrado muy insegura encontrada en un archivo JavaScript"
 tags: ["cybersec", "movistar"]
 ---
@@ -13,7 +13,7 @@ Hola. Estaba yo un lunes tan tranquilo configurando los puertos de mi router Wif
 
 Al interceptar la solicitud y analizar los datos que se envían al router, pude ver que el usuario predeterminado, que suele ser "1234", se había transformado en unos caracteres diferentes.
 
-![Captura de la solicitud de login](@images/blog/writeup-ssh-movistar/caido_request_login.webp)
+![Captura de la solicitud de login](@images/blog/writeup-maquina-movistar/caido_request_login.webp)
 
 Al descodificar el texto del username (url-decoding), obtenemos "`.-,+`". Este es el nombre de usuario cifrado, pero ¿por qué se ha cifrado? Fue entonces cuando decidí abrir las DevTools para inspeccionar la página y efectivamente, el `<input>` oculto del usuario estaba cifrado.
 

@@ -33,6 +33,10 @@
     height: 100%;
     object-fit: cover;
   }
+  #mdContent > p > code {
+    @apply rounded-md px-[0.2rem] mx-[0.1rem];
+    background-color: #00000044;
+  }
   #mdContent :is(h1, p) {
     @apply leading-6 my-2;
   }

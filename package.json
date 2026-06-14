@@ -12,17 +12,17 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "@sentry/astro": "^10.53.1",
+    "@sentry/astro": "^10.57.0",
     "@spotlightjs/astro": "^3.2.6",
-    "@tailwindcss/vite": "^4.3.0",
-    "astro": "6.1.10",
+    "@tailwindcss/vite": "^4.3.1",
+    "astro": "6.4.6",
     "astro-font": "^1.1.0",
     "astro-icon": "^1.1.5",
     "class-variance-authority": "^0.7.1",
     "node-addon-api": "^8.8.0",
-    "node-gyp": "^12.3.0",
+    "node-gyp": "^12.4.0",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.3.0"
+    "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
     "husky": "^9.1.7",

@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "upgrade": "corepack prepare pnpm@latest --activate && pnpm dlx @astrojs/upgrade",
+    "upgrade-bun": "bun upgrade && bun update && bunx @astrojs/upgrade",
     "astro": "astro",
     "prepare": "node .husky/install.mjs"
   },

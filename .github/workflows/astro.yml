@@ -26,12 +26,12 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Astro Build & Deploy
-        uses: withastro/action@v5
+        uses: withastro/action@v6
         with:
           path: .
-          # node-version: 22
-          package-manager: pnpm@latest
-          # build-cmd: pnpm run build
+          #node-version: 24
+          package-manager: bun@latest
+          #build-cmd: bun run build
 
   deploy:
     needs: build

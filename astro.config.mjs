@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import { satteri } from "@astrojs/markdown-satteri";
 
 import sentry from "@sentry/astro";
 import spotlightjs from "@spotlightjs/astro";
@@ -33,5 +34,10 @@ export default defineConfig({
   },
   build: {
     assets: "assets",
+  },
+  markdown: {
+    processor: satteri({
+      features: { directive: true },
+    }),
   },
 });

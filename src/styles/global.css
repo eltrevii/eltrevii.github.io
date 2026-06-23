@@ -56,6 +56,10 @@
   :not(#main-menu) > a:hover {
     text-shadow: 0 0 10px orange;
   }
+
+  span[title] {
+    @apply decoration-dotted underline underline-offset-2 text-gray-400;
+  }
 }
 
 @layer components {

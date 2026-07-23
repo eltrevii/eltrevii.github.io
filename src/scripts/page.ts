@@ -1,11 +1,9 @@
-function ensureStringArray(arg: string | string[]) {
-  let finalarg: string[];
+function ensureStringArray(arg: string | string[]): string[] {
   if (typeof arg === "string") {
-    finalarg = [arg];
+    return [arg];
   } else {
-    finalarg = arg;
+    return arg;
   }
-  return finalarg;
 }
 
 export function isPage(

@@ -1,32 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --t-space: 3;
-
   --t-link-color: #ffa500;
   --t-link-hover-color: #e70;
 }
 
 @layer base {
   body {
-    @apply text-lg text-wrap wrap-break-word leading-6;
+    font-size: var(--text-lg);
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    line-height: calc(var(--spacing) * 6);
   }
   h1 {
-    @apply text-3xl;
+    font-size: var(--text-3xl);
   }
   h2 {
-    @apply text-2xl;
+    font-size: var(--text-2xl);
   }
   a {
     color: var(--t-link-color);
     text-decoration: underline;
-    text-underline-offset: --spacing(0.5);
+    text-underline-offset: calc(var(--spacing) * 0.5);
   }
   div#main-content {
-    @apply mt-3 mb-auto;
+    margin-top: calc(var(--spacing) * 3);
+    margin-bottom: auto;
   }
   li::before {
-    @apply inline-block content-["~"] text-2xl/1 mr-3;
+    content: "~";
+    display: inline-block;
+    font-size:    var(--text-2xl);
+    line-height:  var(--spacing);
+    margin-right: calc(var(--spacing) * 3);
   }
   #mdContent img {
     width: 100%;
@@ -34,40 +40,54 @@
     object-fit: cover;
   }
   #mdContent > p > code {
-    @apply rounded-md px-[0.2rem] mx-[0.1rem];
+    border-radius: var(--radius-md);
+    padding-inline: 0.2rem;
+    margin-inline: 0.1rem;
     background-color: #00000044;
   }
   #mdContent :is(h1, p) {
-    @apply leading-6 my-2;
+    line-height:  calc(var(--spacing) * 6);
+    margin-block: calc(var(--spacing) * 2);
   }
   #mdContent :is(hr) {
-    @apply my-4;
+    margin-block: calc(var(--spacing) * 4);
   }
   #mdContent :is(pre) {
     overflow-y: hidden;
-    @apply px-3 py-2;
+    padding-inline: calc(var(--spacing) * 3);
+    padding-block:  calc(var(--spacing) * 2);
   }
   #tag {
-    @apply px-2 py-1 rounded-md bg-indigo-500/35 backdrop-blur;
+    padding-inline: calc(var(--spacing) * 2);
+    padding-block:  calc(var(--spacing) * 1);
+    border-radius:  var(--radius-md);
+    @apply bg-indigo-500/35 backdrop-blur;
   }
   #tags {
-    @apply my-3;
+    margin-block: calc(var(--spacing) * 3);
   }
   :not(#main-menu) > a:hover {
     text-shadow: 0 0 10px orange;
   }
 
   span[title] {
-    @apply decoration-dotted underline underline-offset-2 text-gray-400;
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+    color: var(--color-gray-400);
   }
 }
 
 @layer components {
   .card {
-    @apply p-3 mt-3 shadow-lg;
+    margin-top: calc(var(--spacing) * 3);
+    padding:    calc(var(--spacing) * 3);
+    @apply shadow-lg;
   }
   .card-alt {
-    @apply px-2 py-3 my-0;
+    margin-block: 0px;
+    padding-inline: calc(var(--spacing) * 2);
+    padding-block:  calc(var(--spacing) * 3);
   }
   .striped {
     background: repeating-linear-gradient(
@@ -108,13 +128,16 @@ body::before {
   }
 }*/
 nav a[aria-current="page"] {
-  @apply no-underline font-bold;
+  font-weight: var(--font-weight-bold);
+  text-decoration-line: none;
 }
 nav a:not([aria-current="page"]) {
-  @apply text-white underline underline-offset-2;
+  color: var(--color-white);
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
 }
 ::-webkit-scrollbar {
-  width: --spacing(4);
+  width: calc(var(--spacing) * 4);
 }
 ::-webkit-scrollbar-track {
   background: #a73d01;

@@ -1,65 +1,66 @@
 ---
-import { AstroFont } from "astro-font";
 import "../styles/global.css";
+
+import { AstroFont } from "astro-font";
 ---
 
 <!doctype html>
 <html lang="en" class="bg-linear-to-b from-indigo-950 to-yellow-900 text-gray-200">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="nothing to see here" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>trevi's website</title>
-		<AstroFont
-			config={[
-				{
-					src: [],
-					name: "Funnel Display",
-					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800',
-					preload: true,
-					display: "swap",
-					selector: "h1, .title",
-					fallback: "sans-serif",
-				},
-				{
-					src: [],
-					name: "Chakra Petch",
-					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400;1,700',
-					preload: true,
-					display: "swap",
-					selector: ":not(pre) > a, details summary",
-					fallback: "sans-serif",
-				},
-				{
-					src: [],
-					name: "Space Mono",
-					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700',
-					preload: false,
-					display: "swap",
-					selector: "pre, code",
-					fallback: "sans-serif",
-				},
-				{
-					src: [],
-					name: "Fira Sans",
-					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700',
-					preload: true,
-					display: "swap",
-					selector: "body",
-					fallback: "sans-serif",
-				},
-			]}
-		/>
-	</head>
-	<body id="body" class="min-h-dvh w-full justify-self-center">
-		<div id="contflex" class="min-h-dvh flex flex-col w-full px-3 max-w-5xl justify-between justify-self-center mx-auto">
-			<slot name="headers" />
-			<div role="main" id="main-content" class="grow bg-linear-to-b from-gray-300/30 to-black/35 rounded-md px-6 py-4">
-				<slot />
-			</div>
-			<slot name="footer" />
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="nothing to see here" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>trevi's website</title>
+        <AstroFont
+            config={[
+                {
+                    src: [],
+                    name: "Funnel Display",
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800',
+                    preload: true,
+                    display: "swap",
+                    selector: "h1, .title",
+                    fallback: "sans-serif",
+                },
+                {
+                    src: [],
+                    name: "Chakra Petch",
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400;1,700',
+                    preload: true,
+                    display: "swap",
+                    selector: ":not(pre) > a, details summary",
+                    fallback: "sans-serif",
+                },
+                {
+                    src: [],
+                    name: "Space Mono",
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700',
+                    preload: false,
+                    display: "swap",
+                    selector: "pre, code",
+                    fallback: "sans-serif",
+                },
+                {
+                    src: [],
+                    name: "Fira Sans",
+                    googleFontsURL: 'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700',
+                    preload: true,
+                    display: "swap",
+                    selector: "body",
+                    fallback: "sans-serif",
+                },
+            ]}
+        />
+    </head>
+    <body id="body" class="min-h-dvh w-full justify-self-center">
+        <div id="contflex" class="min-h-dvh flex flex-col w-full px-3 max-w-5xl justify-between justify-self-center mx-auto">
+            <slot name="headers" />
+            <div role="main" id="main-content" class="grow bg-linear-to-b from-gray-300/30 to-black/35 rounded-md px-6 py-4">
+                <slot />
+            </div>
+            <slot name="footer" />
+        </div>
+    </body>
 </html>

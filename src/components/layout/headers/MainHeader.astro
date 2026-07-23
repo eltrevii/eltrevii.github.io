@@ -4,6 +4,8 @@ import Navigation from "../modular/Navigation.astro";
 
 import { Image } from 'astro:assets';
 
+import { isPage, isSubPage } from '../../../scripts/page';
+
 const { pathname } = Astro.url;
 const curPage = pathname.slice(1);
 const curPageS = curPage === '' ? ' / ' : curPage.replace(/\//g, " / ")
@@ -16,13 +18,8 @@ const curPageS = curPage === '' ? ' / ' : curPage.replace(/\//g, " / ")
     <p slot="nav-center" class="italic text-white/70">{curPageS}</p>
     <!-- slot nav-right -->
     <Navigation slot="nav-right">
-        <a aria-current={curPage === '' ? 'page' : 'false'} href="/">home</a>
-        <a aria-current={curPage.startsWith('megathread/') ? 'page' : 'false'} href="/megathread/">megathread</a>
-        <a aria-current={
-          curPage.startsWith('blog/') ||
-          curPage.startsWith('tags/') ||
-          curPage.startsWith('posts/')
-            ? 'page' : 'false'
-        } href="/blog/">blog</a>
+        <a href="/"            aria-current={isPage   (curPage, '')                          }>home</a>
+        <a href="/megathread/" aria-current={isSubPage(curPage, 'megathread/')               }>megathread</a>
+        <a href="/blog/"       aria-current={isSubPage(curPage, ['blog/', 'tags/', 'posts/'])}>blog</a>
     </Navigation>
 </Header>

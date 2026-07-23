@@ -4,6 +4,8 @@ import Navigation from "../modular/Navigation.astro";
 
 const { pathname } = Astro.url;
 const curPage = pathname.slice(1);
+
+import { isSubPage } from '../../../scripts/page';
 ---
 <Header color="dim" stripe="stripedim">
     <!-- slot nav-left -->
@@ -12,7 +14,7 @@ const curPage = pathname.slice(1);
 
     <!-- slot nav-right -->
     <Navigation slot="nav-right">
-        <a aria-current={curPage.startsWith('blog/') ? 'page' : 'false'} href="/blog/">all posts</a>
-        <a aria-current={curPage.startsWith('tags/') ? 'page' : 'false'} href="/tags/">tags</a>
+        <a href="/blog/" aria-current={isSubPage(curPage, 'blog/')}>all posts</a>
+        <a href="/tags/" aria-current={isSubPage(curPage, 'tags/')}>tags</a>
     </Navigation>
 </Header>

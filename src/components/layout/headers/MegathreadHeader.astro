@@ -4,6 +4,8 @@ import Navigation from "../modular/Navigation.astro";
 
 const { pathname } = Astro.url;
 const curPage = pathname.slice(1);
+
+import { isPage } from '../../../scripts/page';
 ---
 <Header color="dim" stripe="stripedim">
     <!-- slot nav-left -->
@@ -12,7 +14,7 @@ const curPage = pathname.slice(1);
 
     <!-- slot nav-right -->
     <Navigation slot="nav-right">
-        <a aria-current={curPage === 'megathread/'          ? 'page' : 'false'} href="/megathread/">main</a>
-        <a aria-current={curPage === 'megathread/tinysoft/' ? 'page' : 'false'} href="/megathread/tinysoft/">software</a>
+        <a href="/megathread/"          aria-current={isPage(curPage, 'megathread/')         }>main</a>
+        <a href="/megathread/tinysoft/" aria-current={isPage(curPage, 'megathread/tinysoft/')}>software</a>
     </Navigation>
 </Header>

@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 ---
 <div id="header">
-    <header class={`bg-linear-to-b ${skeuonav({ color, className })} *:rounded-md items-center`} aria-label="website header">
+    <header class={`bg-linear-to-b ${skeuonav({ color, className })} [&,&>*]:rounded-md items-center`} aria-label="website header">
         <nav class={`${stripe} flex items-start flex-wrap card title gap-3 justify-between`} aria-label="navigation bar">
             <div class="flex gap-4 items-center self-center">
                 <slot name="nav-left" />

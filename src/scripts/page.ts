@@ -11,10 +11,8 @@ export function isPage(
   arg: string | string[],
 ): "page" | "false" {
   const finalarg = ensureStringArray(arg);
-  for (var x of finalarg) {
-    if (curPage === x) {
-      return "page";
-    }
+  if (finalarg.includes(curPage)) {
+    return "page";
   }
   return "false";
 }
@@ -24,7 +22,7 @@ export function isSubPage(
   arg: string | string[],
 ): "page" | "false" {
   const finalarg = ensureStringArray(arg);
-  for (var x of finalarg) {
+  for (const x of finalarg) {
     if (curPage.startsWith(x)) {
       return "page";
     }

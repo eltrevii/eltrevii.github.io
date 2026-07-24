@@ -12,11 +12,13 @@ const posts = (await getCollection("blog")).sort(
 <Layout>
     <MainHeader slot="headers" />
     <BlogHeader slot="headers" />
-    <h1>my blog posts here</h1>
+    <h1>posts</h1>
     <ul class="mt-3">
-        {posts.map(post => (
-            <li><a href={`/posts/${post.id}/`}>{post.data.title}</a> | {post.data.pubDate.toLocaleDateString()}</li>
-        ))}
+        {posts.map(post => {
+            const link = `/posts/${post.id}/`;
+            const pubDateStr = post.data.pubDate.toISOString().split("T")[0];
+            return (<li><pre class="inline-block">{pubDateStr} // </pre><a href={link}>{post.data.title}</a></li>);
+        })}
     </ul>
     <Footer slot="footer" />
 </Layout>

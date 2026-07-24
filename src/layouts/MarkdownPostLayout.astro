@@ -5,29 +5,33 @@ import BlogHeader from "../components/layout/headers/BlogHeader.astro";
 import Footer from "../components/layout/Footer.astro";
 
 const { frontmatter } = Astro.props;
+const pubDateStr = frontmatter.pubDate.toISOString().split("T")[0]
 ---
 <Layout>
     <MainHeader slot="headers" />
     <BlogHeader slot="headers" />
 
-    <h1 class="font-bold text-5xl">{frontmatter.title}</h1>
+    <div id="frontmatter" class="px-4 py-2 rounded-md bg-black/20">
+        <h1 class="font-bold text-5xl">{frontmatter.title}</h1>
 
-    <div id="tags" class="flex gap-2 items-center">
-        {frontmatter.tags.map((tag: string) => (
-            <p><a id="tag" class="nh" href={`/tags/${tag}/`}>#{tag}</a></p>
-        ))}
+        <div id="tags" class="flex gap-2 items-center">
+            {frontmatter.tags.map((tag: string) => (
+                <p><a id="tag" class="nh" href={`/tags/${tag}/`}>#{tag}</a></p>
+            ))}
+        </div>
+
+        <div id="desc" class="flex flex-col gap-1">
+            <p><em>{frontmatter.description}</em></p>
+            <p>~ {frontmatter.author} | {pubDateStr}</p>
+        </div>
+
+        <div class="flex grow">
+            <img class="rounded-xl mt-1 justify-self-center grow" src={frontmatter.image.url.src} width="800" alt={frontmatter.image.alt} />
+        </div>
+        { !frontmatter.image.credit ? null :
+        <p class="my-2 italic">banner credit: <a target="_blank" href={frontmatter.image.credit}>link</a></p>
+        }
     </div>
-
-    <p><em>{frontmatter.description}</em></p>
-    <p>by {frontmatter.author} | {frontmatter.pubDate.toLocaleDateString()}</p>
-    <p></p>
-
-    <div class="flex grow">
-        <img class="rounded-xl mt-1 justify-self-center grow" src={frontmatter.image.url.src} width="800" alt={frontmatter.image.alt} />
-    </div>
-    { !frontmatter.image.credit ? null :
-      <p class="my-2 italic">image credit: <a target="_blank" href={frontmatter.image.credit}>link</a></p>
-    }
     <hr class="my-3 border-solid border-2 rounded-full border-white/60">
     <div id="mdContent">
         <slot />

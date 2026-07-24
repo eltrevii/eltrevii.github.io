@@ -19,7 +19,6 @@ const crumb = breadcrumb(pathname.slice(1));
     <!-- slot nav-right -->
     <Navigation slot="nav-right">
         <NavLink href="/"            title="home"       paths='' />
-  <!--  <NavLink href="/megathread/" title="megathread" paths='megathread/'                  relative={true} /> -->
         <NavLink href="/blog/"       title="blog"       paths={['blog/', 'tags/', 'posts/']} relative={true} />
     </Navigation>
 </Header>

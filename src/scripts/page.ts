@@ -29,3 +29,11 @@ export function isSubPage(
   }
   return "false";
 }
+
+export function breadcrumb(path: string): string {
+  if (path === '') {
+    return ' / ';
+  } else {
+    return path.replace(/\//g, " / ");
+  }
+}

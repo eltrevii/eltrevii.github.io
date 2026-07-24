@@ -1,0 +1,18 @@
+---
+import { isPage, isSubPage } from '../../../scripts/page';
+
+interface Props {
+  href: string,
+  title: string,
+  paths?: string | string[],
+  relative?: boolean,
+}
+const { href, title, paths, relative = false } = Astro.props;
+
+const { pathname } = Astro.url;
+const curPage = pathname.slice(1);
+---
+<a href={href} aria-current={!relative
+  ? isPage   (curPage, paths ?? href)
+  : isSubPage(curPage, paths ?? href)
+}>{title}</a>

@@ -12,20 +12,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/markdown-satteri": "^0.3.7",
-    "@sentry/astro": "^10.70.0",
+    "@astrojs/markdown-satteri": "0.4.1",
+    "@sentry/astro": "^10.75.0",
     "@spotlightjs/astro": "^3.2.6",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "7.2.4",
+    "astro": "7.3.3",
     "astro-font": "^1.2.0",
     "astro-icon": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "node-addon-api": "^8.9.2",
     "node-gyp": "^12.4.0",
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@types/bun": "^1.4.0"
+    "@types/bun": "^1.4.2"
   }
 }
